@@ -52,7 +52,7 @@ const velociraptor = new Beast (`Velociraptor`)
 
 let input = document.querySelector('body'); //How to pull from the body,
 
-rathalos.stats()
+// rathalos.stats()
 
 let currentBeast;
 let statInterval;
@@ -111,8 +111,20 @@ start.addEventListener("click", () => {
         thirst.value = thirstvalue;
         happiness.value = happinessvalue;
         tiredness.value = tirednessvalue;
+        checkGameOver() 
     }, 500)
+    
 })
+
+const checkGameOver = () => { 
+    console.log("game over")
+    if (healthvalue == 0 || hungervalue == 0 || thirstvalue == 0 || happinessvalue == 0 || tirednessvalue == 0){
+        clearInterval(statInterval);
+        alert(`Game over! Your beast has died.`);
+        resetGame();
+    }
+};
+
 
 feedButton.addEventListener("click", () => {
       thirstvalue -= 5
@@ -162,12 +174,7 @@ const updateStats = () => {
     document.getElementById(`health`) = health.value
 } //this tells it to update the stats
 
-const checkGameOver = () => {
-    if (healthvalue == 0 || hungervalue == 0 || thirstvalue == 0 || happinessvalue == 0 || tirednessvalue == 0)
-        clearInterval(statInterval);
-        alert(`Game over! Your beast has died.`);
-        resetGame();
-} //this brings up the game over screen once stated stat reaches stated value
+ //this brings up the game over screen once stated stat reaches stated value
 
 const resetGame = () => {
     document.getElementById('selectBeast').style.display = 'block'
@@ -208,5 +215,5 @@ images.addEventListener('click', ()=>{
 })
 })
 
- document.getElementById('selectBeast').style.display = 'block'
- document.getElementById('beastCare').style.display = 'none'
+ document.getElementById('sprites').style.display = 'block'
+//  document.getElementById('beastCare').style.display = 'none'
