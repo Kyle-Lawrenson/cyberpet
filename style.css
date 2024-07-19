@@ -41,8 +41,7 @@ body {
     width: 348px;
     margin-top: 150px;
 }
-#food, 
-#feedButton{
+#food {
     border: 2px darkblue solid;
     background-color: darkblue;
     margin-left: 40px ;
@@ -53,8 +52,7 @@ body {
     
 
 }
-#sleep, 
-#sleepButton{
+#sleep {
     border: 2px rgb(173, 173, 118) solid;
     background-color: rgb(173, 173, 118);
     margin-left: 40px ;
@@ -64,8 +62,7 @@ body {
     border-radius: 80px;
 
 }
-#water, 
-#drinkButton{
+#water {
     border: 2px blue solid;
     background-color: blue;
     margin-left: 40px ;
@@ -75,8 +72,7 @@ body {
     border-radius: 80px;
 
 }
-#gym, 
-#exerciseButton{
+#gym {
     border: 2px white solid;
     background-color: white;
     margin-left: 40px ;
