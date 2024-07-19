@@ -1,0 +1,237 @@
+body {
+    background-color: black;
+    /* height: 100vh; */
+    width: 1885px;
+    height: 947px;
+}
+
+.border1{
+    background-image: url(./img/background/sky.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.border2{
+    /* border: 2px blueviolet solid; */
+    width: 900px;
+}
+
+.main_game{
+    /* border: 2px aqua solid; */
+    display: flex;
+    
+}
+
+.buttons{
+     
+    border: green solid;
+    display: flex;
+    flex-direction: row;
+   margin-right: px;
+
+}
+.button_wrapper{
+    display: flex;
+    border: 2px white solid;
+    
+    flex-direction: column;
+    height: 500px;
+    width: 348px;
+    margin-top: 150px;
+}
+#food, 
+#feedButton{
+    border: 2px darkblue solid;
+    background-color: darkblue;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+    
+
+}
+#sleep, 
+#sleepButton{
+    border: 2px rgb(173, 173, 118) solid;
+    background-color: rgb(173, 173, 118);
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+
+}
+#water, 
+#drinkButton{
+    border: 2px blue solid;
+    background-color: blue;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+
+}
+#gym, 
+#exerciseButton{
+    border: 2px white solid;
+    background-color: white;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+}
+
+.wrapper2{
+    /* border: yellow solid; */
+    display: flex;
+    width: 1384px;
+    height: 713px;
+    justify-content: center;
+}
+
+.img{
+    background-image: url(img/background/main_background.jpg);
+    /* border: 2px white solid; */
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 705px;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+
+.wrapper2{
+    /* border: 2px white solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sprites_wrapper{
+    /* border: 2px white solid; */
+    width: 820px;
+    height: 204px;
+    justify-content: center;
+    margin-left: px;
+    /* margin-top: 200px ; */
+    
+}
+.sprites{
+    /* border: 5px blue solid; */
+    display: flex;
+    flex-direction: column;
+}
+/* .wrapper3{
+    /* border: 2px black solid;
+ } */
+
+#images{
+    /* border: 2px blueviolet solid; */
+    flex-direction: column;
+    /* margin-top:200px ; */
+    width: 1003px;
+    height: 707px;
+    justify-content: center;
+
+}
+
+#images img {
+    display: none;
+}
+.stats{
+     
+    border: green solid;
+    display: flex;
+    flex-direction: row;
+   margin-right: 100px;
+   width: 500px;
+   height: 715px;
+
+}
+
+.stat-wrapper{
+    border: 2px cadetblue solid;
+    height: 500px;
+    width: 348px;
+    margin-top: 190px;
+    justify-content: center;
+}
+.main-box{
+    border: 2px white solid;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 410px;
+    margin-top: 90px;
+}
+
+.stat-hunger{
+    display: flex;
+    background-color: aqua;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+    height: 60px;
+    width: 300px;
+}
+#hunger-bar{
+    height: 60px;
+    width: 250px;
+}
+.stat-thrist{
+    display: flex;
+    background-color: blue;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+    height: 60px;
+    width: 300px;
+}
+
+#thrist-bar{
+    height: 60px;
+    width: 250px;
+}
+
+.stat-tiredness{
+    display: flex;
+    background-color: brown ;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+    height: 60px;
+    width: 300px;
+}
+
+#tiredness-bar {
+    height: 60px;
+    width: 250px;
+}
+
+.stat-happiness{
+    display: flex;
+    background-color: cadetblue;
+    margin-left: 40px ;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+    height: 60px;
+    width: 300px;
+}
+
+#happiness-bar{
+    height: 60px;
+    width: 250px;
+}
+
