@@ -52,6 +52,8 @@ const velociraptor = new Beast (`Velociraptor`)
 
 let input = document.querySelector('body'); //How to pull from the body,
 
+rathalos.stats()
+
 let currentBeast;
 let statInterval;
 
@@ -85,7 +87,10 @@ const selectBeast = (beast) => {
 
 }
 
-const feedButton = document.getElementById("food");
+const feedButton = document.getElementById("foodBtn");
+const drinkButton = document.getElementById("drinkBtn")
+const sleepButton = document.getElementById("sleepBtn")
+const exerciseButton = document.getElementById("gymBtn")
 let start = document.getElementById('startBtn')
 let healthvalue = 100
 let hungervalue = 100
@@ -93,16 +98,15 @@ let thirstvalue = 100
 let happinessvalue = 100
 let tirednessvalue = 100
 
-start.addEventListener("click", () => {
-    
+start.addEventListener("click", () => {  
     statInterval = setInterval(() => {
-    //    healthvalue -= 1
+        healthvalue -= 1
         hungervalue -= 1
         thirstvalue -= 1
         happinessvalue -= 1
         tirednessvalue -= 1
-
-   //     health.value = healthvalue;
+        //  decreasing and updating progress bars
+        health.value = healthvalue;
         hunger.value = hungervalue;
         thirst.value = thirstvalue;
         happiness.value = happinessvalue;
@@ -111,17 +115,39 @@ start.addEventListener("click", () => {
 })
 
 feedButton.addEventListener("click", () => {
-    // if ((healthvalue<100 && healthvalue>0) && (hungervalue<100 && hungervalue>0) && (thirstvalue<100 && thirstvalue>0) && (happinessvalue<100 && happinessvalue>0) ) {
-      thirstvalue-= 5
-    //   healthvalue += 5
+      thirstvalue -= 5
+      healthvalue += 5
       hungervalue += 5
-      // updateProgressBars();
-      // progressBar.textContent = progressBar.value
-    // }
-  });
+});
+
+// console.log("eating")    test
+
+drinkButton.addEventListener("click", () => {
+      thirstvalue += 5
+      healthvalue += 5
+});
+
+// console.log("drinking")  test
+
+sleepButton.addEventListener("click", () => {
+      tirednessvalue += 5
+      hungervalue -= 5
+});
+
+console.log("sleeping")
+
+exerciseButton.addEventListener("click", () => {
+      thirstvalue -= 5
+      healthvalue += 5
+      hungervalue -= 5
+      tirednessvalue -= 5
+      happinessvalue += 5
+});
+
+console.log("exercising")
 
 const updateStats = () => {
-   // document.getElementById('health').innerText = currentBeast.health
+   document.getElementById('health').innerText = currentBeast.health
     document.getElementById('hunger').innerText = currentBeast.hunger
     document.getElementById('thirst').innerText = currentBeast.thirst
     document.getElementById('happiness').innerText = currentBeast.happiness
@@ -133,12 +159,13 @@ const updateStats = () => {
     document.getElementById('thirst') = thirst.value // .style.width = `${thirst.value}%`
     document.getElementById('happiness') = happiness.value // .style.width = `${happiness.value}%`
     document.getElementById('tiredness') = tiredness.value // .style.width = `${tiredness.value}%`
+    document.getElementById(`health`) = health.value
 } //this tells it to update the stats
 
 const checkGameOver = () => {
-    if (currentBeast.health == 0 || currentBeast.hunger == 0 || currentBeast.thirst == 0 || currentBeast.happiness == 0 || currentBeast.tiredness == 0)
+    if (healthvalue == 0 || hungervalue == 0 || thirstvalue == 0 || happinessvalue == 0 || tirednessvalue == 0)
         clearInterval(statInterval);
-        alert(`Game over! Your ${currentBeast}, ${currentBeast.name} has died.`);
+        alert(`Game over! Your beast has died.`);
         resetGame();
 } //this brings up the game over screen once stated stat reaches stated value
 
@@ -154,23 +181,23 @@ const resetGame = () => {
 //     updateStats()
 // }); //when button is clicked do this
 
-const drinkButton = document.getElementById("water");
-drinkButton.addEventListener('click', () => {
-    currentBeast.drinks();
-    updateStats()
-}); //when button is clicked do this
+// const drinkButton = document.getElementById("water");
+// drinkButton.addEventListener('click', () => {
+//     currentBeast.drinks();
+//     updateStats()
+// }); //when button is clicked do this
 
-const sleepButton = document.getElementById("sleep");
-sleepButton.addEventListener('click', () => {
-    currentBeast.sleeps();
-    updateStats()
-}); //when button is clicked do this
+// const sleepButton = document.getElementById("sleep");
+// sleepButton.addEventListener('click', () => {
+//     currentBeast.sleeps();
+//     updateStats()
+// }); //when button is clicked do this
 
-const exerciseButton = document.getElementById("gym");
-exerciseButton.addEventListener('click', () => {
-    currentBeast.exercises();
-    updateStats()
-}); //when button is clicked do this
+// const exerciseButton = document.getElementById("gym");
+// exerciseButton.addEventListener('click', () => {
+//     currentBeast.exercises();
+//     updateStats()
+// }); //when button is clicked do this
 
 let choices =document.querySelectorAll ("#sprites img")
 choices.forEach((images)=>{
