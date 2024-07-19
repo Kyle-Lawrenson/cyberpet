@@ -11,7 +11,7 @@
     <div class="border1">
         <div class="border2">
             <div class="title">
-                <h1>Bob rosses island adventures</h1>
+                <h1>Bob Ross' Island Adventures</h1>
             </div>
         </div>
     </div>  
@@ -22,10 +22,11 @@
             <div class="wrapper1">
                 <h3>buttons</h3>
                 <div class="button_wrapper">
-                    <div id="food"><img src="./img/buttons/meat.png" alt="" width="100px" height="100px"></div>
-                    <div id="water"><img src="./img/buttons/water.png" alt="" width="100px" height="100px"></div>
-                    <div id="sleep"><img src="./img/buttons/moon.png" alt="" width="100px" height="100px"></div>
-                    <div id="gym"><img src="./img/buttons/gym.png" alt="" width="100px" height="100px"></div>
+                    <div id="food"><img src="./buttons/meat.png" alt="" width="100px" height="100px"></div>
+                    <div id="water"><img src="./buttons/water.png" alt="" width="100px" height="100px"></div>
+                    <div id="sleep"><img src="./buttons/moon.png" alt="" width="100px" height="100px"></div>
+                    <div id="gym"><img src="./buttons/gym.png" alt="" width="100px" height="100px"></div>
+                    <div id="startBtn"><button>Start</button></div>
                 </div>
             </div>
          </div>
@@ -33,18 +34,18 @@
                 <div class="img">  
                    <div class="sprites_wrapper">
                     <div id="sprites">
-                        <img class="one" id="woods_" src="./img/spirts/dinovaldo.png" alt="" width="200px" height="200px">
-                        <img class="two" id="water_" src="img/spirts/5a43a993237086fed6653db90257bc79.png" alt="" width="200x" height="200px">
-                        <img class="three" id="snowy_" src="./img/spirts/MHWI-Barioth_Icon.png" alt="" width="200px" height="200px">
-                        <img class="four" id="sky_" src="img/spirts/MHW-Rathian_Icon.png" alt="" width="200px" height="200px">
+                        <img class="one" id="woods_" src="./spirts/dinovaldo.png" alt="" width="200px" height="200px">
+                        <img class="two" id="water_" src="./spirts/5a43a993237086fed6653db90257bc79.png" alt="" width="200x" height="200px">
+                        <img class="three" id="snowy_" src="./spirts/MHWI-Barioth_Icon.png" alt="" width="200px" height="200px">
+                        <img class="four" id="sky_" src="./spirts/MHW-Rathian_Icon.png" alt="" width="200px" height="200px">
                     </div>  
                 </div> 
                 <div class="wrapper3">  
                     <div id="images">
-                        <img class="one"  id="woods" src="./img/spirts/dinovaldo.gif" alt="" width="400px" height="200px">
-                        <img class="two" id="water_" src="./img/spirts/2.gif" alt="" width="400px" height="200px">
-                        <img class="three" id="snowy" src="./img/spirts/3.gif" alt="" width="400px" height="200px">
-                        <img class="four" id="sky" src="./img/spirts/4.gif" alt="" width="400px" height="600px">
+                        <img class="one"  id="woods" src="./spirts/dinovaldo.gif" alt="" width="400px" height="200px">
+                        <img class="two" id="water_" src="./spirts/2.gif" alt="" width="400px" height="200px">
+                        <img class="three" id="snowy" src="./spirts/3.gif" alt="" width="400px" height="200px">
+                        <img class="four" id="sky" src="./spirts/4.gif" alt="" width="400px" height="600px">
                     </div>
                 </div>
                   </div>  
@@ -52,15 +53,15 @@
         <div class="stats">
             <div class="stat-wrapper">
                    <div class="main-box">
-                        <div class="stat-hunger"><meter id="hunger-bar" class="one" value="70" min="0" max="100" low="30" high="60" optimum="100">Hunger:</meter></div>
-                        <div class="stat-thrist"><meter id="thrist-bar" class="two" value="70" min="0" max="100" low="30" high="60" optimum="100">thrist:</meter></div>
-                        <div class="stat-tiredness"><meter id="tiredness-bar" class="three" value="70" min="0" max="100" low="30" high="60" optimum="100">tireness:</meter></div>
-                        <div class="stat-happiness"><meter id="happiness-bar" class="four" value="70" min="0" max="100" low="30" high="60" optimum="100">happyiness:</meter></div>
+                        <div id="hungerBar"><progress id="hunger" class="one" value="100" min="0" max="100" low="30" high="60" optimum="100"><p>Hunger</p></progress></div>
+                        <div id="thirstBar"><progress id="thirst" class="two" value="100" min="0" max="100" low="30" high="60" optimum="100"><p>thirst</p></progress></div>
+                        <div id="tirednessBar"><progress id="tiredness" class="three" value="100" min="0" max="100" low="30" high="60" optimum="100">tireness:</progress></div>
+                        <div id="happinessBar"><progress id="happiness" class="four" value="100" min="0" max="100" low="30" high="60" optimum="100">happyiness:</progress></div>
                   </div>      
             </div>
         </div>
     </div>
-        <script src="./animalclass.js"></script>
+        <!-- <script src="./animalclass.js"></script> -->
         <script src="./script.js" type="module"></script>        
 </body>
 </html>

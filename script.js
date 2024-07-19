@@ -79,41 +79,66 @@ const selectBeast = (beast) => {
     document.getElementById('selectBeast').style.display = 'none'
     document.getElementById('BeastCare').style.display = 'block'
 
+    // statInterval = setInterval(() => {
+    //     currentBeast.decreseStats();
+    //     updateStats();
+    //     checkGameOver();
+    // }, 100); //this decreases the stats of the beast
+
+}
+
+const feedButton = document.getElementById("food");
+let start = document.getElementById('startBtn')
+let healthvalue = 100
+let hungervalue = 100
+let thirstvalue = 100
+let happinessvalue = 100
+let tirednessvalue = 100
+
+start.addEventListener("click", () => {
+    
     statInterval = setInterval(() => {
-        currentBeast.decreseStats();
-        updateStats();
-        checkGameOver();
-    }, 1000); //this decreases the stats of the beast
+    //    healthvalue -= 1
+        hungervalue -= 1
+        thirstvalue -= 1
+        happinessvalue -= 1
+        tirednessvalue -= 1
 
-}
+   //     health.value = healthvalue;
+        hunger.value = hungervalue;
+        thirst.value = thirstvalue;
+        happiness.value = happinessvalue;
+        tiredness.value = tirednessvalue;
+    }, 500)
+})
 
-const decreseStats = () => {
-    if (health >= 0 || hunger >= 0 || thirst >= 0 || happiness >= 0 || tiredness >= 0) {
-     health -= 1;
-     hunger -= 1;
-     thirst -= 1;
-     happiness -= 1;
-     tiredness -= 1   
-    }
-}
+feedButton.addEventListener("click", () => {
+    // if ((healthvalue<100 && healthvalue>0) && (hungervalue<100 && hungervalue>0) && (thirstvalue<100 && thirstvalue>0) && (happinessvalue<100 && happinessvalue>0) ) {
+      thirstvalue-= 5
+    //   healthvalue += 5
+      hungervalue += 5
+      // updateProgressBars();
+      // progressBar.textContent = progressBar.value
+    // }
+  });
 
 const updateStats = () => {
-    document.getElementById('health').innerText = currentBeast.health
+   // document.getElementById('health').innerText = currentBeast.health
     document.getElementById('hunger').innerText = currentBeast.hunger
     document.getElementById('thirst').innerText = currentBeast.thirst
     document.getElementById('happiness').innerText = currentBeast.happiness
     document.getElementById('tiredness').innerText = currentBeast.tiredness
 
 
-    document.getElementById('health-bar').style.width = `${health}`
-    document.getElementById('hunger-bar').style.width = `${hunger}%`
-    document.getElementById('thirst-bar').style.width = `${thirst}%`
-    document.getElementById('happiness-bar').style.width = `${happiness}%`
-    document.getElementById('tiredness-bar').style.width = `${tiredness}%`
+  //  document.getElementById('health') = health.value // .style.width = `${health.value}`
+    document.getElementById('hunger') = hunger.value // .style.width = `${hunger.value}%`
+    document.getElementById('thirst') = thirst.value // .style.width = `${thirst.value}%`
+    document.getElementById('happiness') = happiness.value // .style.width = `${happiness.value}%`
+    document.getElementById('tiredness') = tiredness.value // .style.width = `${tiredness.value}%`
 } //this tells it to update the stats
 
 const checkGameOver = () => {
-    if (currentBeast.health <= 0 || currentBeast.hunger >= 100 || currentBeast.thirst >= 100 ||currentBeast.happiness <= 0 || currentBeast.tiredness <= 0)
+    if (currentBeast.health == 0 || currentBeast.hunger == 0 || currentBeast.thirst == 0 || currentBeast.happiness == 0 || currentBeast.tiredness == 0)
         clearInterval(statInterval);
         alert(`Game over! Your ${currentBeast}, ${currentBeast.name} has died.`);
         resetGame();
@@ -125,11 +150,11 @@ const resetGame = () => {
     currentBeast = null;
 } //this tells the game to reset
 
-const feedButton = document.getElementById("food");
-feedButton.addEventListener('click', () => {
-    currentBeast.eats();
-    updateStats()
-}); //when button is clicked do this
+// const feedButton = document.getElementById("food");
+// feedButton.addEventListener('click', () => {
+//     currentBeast.eats();
+//     updateStats()
+// }); //when button is clicked do this
 
 const drinkButton = document.getElementById("water");
 drinkButton.addEventListener('click', () => {
