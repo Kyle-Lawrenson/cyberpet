@@ -83,7 +83,7 @@ const selectBeast = (beast) => {
         currentBeast.decreseStats();
         updateStats();
         checkGameOver();
-    }, 100); //this decreases the stats of the beast
+    }, 1000); //this decreases the stats of the beast
 
 }
 
