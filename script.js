@@ -52,8 +52,6 @@ const velociraptor = new Beast (`Velociraptor`)
 
 let input = document.querySelector('body'); //How to pull from the body,
 
-rathalos.stats()
-
 let currentBeast;
 let statInterval;
 
